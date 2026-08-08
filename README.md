@@ -4,58 +4,130 @@
 </a>
 
 <p align="center">
-  An Open-Source AI Chatbot Template Built With Next.js and the AI SDK by Vercel.
+  Um template de Chatbot de IA de código aberto construído com Next.js, Vercel AI SDK e Google Gemini.
 </p>
 
 <p align="center">
-  <a href="#features"><strong>Features</strong></a> ·
-  <a href="#model-providers"><strong>Model Providers</strong></a> ·
-  <a href="#deploy-your-own"><strong>Deploy Your Own</strong></a> ·
-  <a href="#running-locally"><strong>Running locally</strong></a>
+  <a href="#quick-start"><strong>Início Rápido</strong></a> ·
+  <a href="#features"><strong>Funcionalidades</strong></a> ·
+  <a href="#model-providers"><strong>Provedores de Modelos</strong></a> ·
+  <a href="#project-structure"><strong>Estrutura do Projeto</strong></a> ·
+  <a href="#deploy"><strong>Deploy</strong></a> ·
+  <a href="./LOCAL_DEPLOYMENT.md"><strong>Guia de Deploy Local 📖</strong></a>
 </p>
-<br/>
 
-## Features
+---
 
-- [Next.js](https://nextjs.org) App Router
-  - Advanced routing for seamless navigation and performance
-  - React Server Components (RSCs) and Server Actions for server-side rendering and increased performance
-- [AI SDK](https://sdk.vercel.ai/docs)
-  - Unified API for generating text, structured objects, and tool calls with LLMs
-  - Hooks for building dynamic chat and generative user interfaces
-  - Supports Google (default), OpenAI, Anthropic, Cohere, and other model providers
-- [shadcn/ui](https://ui.shadcn.com)
-  - Styling with [Tailwind CSS](https://tailwindcss.com)
-  - Component primitives from [Radix UI](https://radix-ui.com) for accessibility and flexibility
-- Data Persistence
-  - [Vercel Postgres powered by Neon](https://vercel.com/storage/postgres) for saving chat history and user data
-  - [Vercel Blob](https://vercel.com/storage/blob) for efficient object storage
-- [NextAuth.js](https://github.com/nextauthjs/next-auth)
-  - Simple and secure authentication
+## ⚡ Quick Start (Início Rápido)
 
-## Model Providers
+Você pode configurar o projeto localmente de duas maneiras: seguindo os passos básicos abaixo ou utilizando o nosso guia completo de infraestrutura em nuvem/local (com Neon Postgres e Vercel Blob) no [Guia de Deploy Local](./LOCAL_DEPLOYMENT.md).
 
-This template ships with Google Gemini `gemini-1.5-pro` models as the default. However, with the [AI SDK](https://sdk.vercel.ai/docs), you can switch LLM providers to [OpenAI](https://openai.com), [Anthropic](https://anthropic.com), [Cohere](https://cohere.com/), and [many more](https://sdk.vercel.ai/providers/ai-sdk-providers) with just a few lines of code.
+### 🚀 Deploy/Configuração Rápida com Neon
 
-## Deploy Your Own
+Se você preferir não configurar um PostgreSQL local, você pode automatizar a criação do banco de dados na nuvem usando o Neon:
 
-You can deploy your own version of the Next.js AI Chatbot to Vercel with one click:
+1. Certifique-se de instalar as dependências com `pnpm install`.
+2. Execute o script de configuração automática do Neon:
+   ```bash
+   node scripts/setup-neon.js
+   ```
+   *Isso abrirá seu navegador para autenticação no Neon, criará um projeto/banco de dados e configurará a variável `POSTGRES_URL` no seu arquivo `.env.local` de forma automática.*
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel-labs%2Fgemini-chatbot&env=AUTH_SECRET,GOOGLE_GENERATIVE_AI_API_KEY&envDescription=Learn%20more%20about%20how%20to%20get%20the%20API%20Keys%20for%20the%20application&envLink=https%3A%2F%2Fgithub.com%2Fvercel-labs%2Fgemini-chatbot%2Fblob%2Fmain%2F.env.example&demo-title=Next.js%20Gemini%20Chatbot&demo-description=An%20Open-Source%20AI%20Chatbot%20Template%20Built%20With%20Next.js%20and%20the%20AI%20SDK%20by%20Vercel.&demo-url=https%3A%2F%2Fgemini.vercel.ai&stores=[{%22type%22:%22postgres%22},{%22type%22:%22blob%22}])
+---
 
-## Running locally
+### Configuração Manual Tradicional
 
-You will need to use the environment variables [defined in `.env.example`](.env.example) to run Next.js AI Chatbot. It's recommended you use [Vercel Environment Variables](https://vercel.com/docs/projects/environment-variables) for this, but a `.env` file is all that is necessary.
+### 1. Requisitos Prévios
 
-> Note: You should not commit your `.env` file or it will expose secrets that will allow others to control access to your various Google Cloud and authentication provider accounts.
+Certifique-se de ter instalado em sua máquina:
+- **Node.js** (v18+)
+- **pnpm** (recomendado) ou npm/yarn
+- Banco de dados **PostgreSQL** (pode ser local ou gerenciado como Neon/Supabase)
 
-1. Install Vercel CLI: `npm i -g vercel`
-2. Link local instance with Vercel and GitHub accounts (creates `.vercel` directory): `vercel link`
-3. Download your environment variables: `vercel env pull`
+### 2. Instalar Dependências
+
+Instale as dependências do projeto utilizando o `pnpm`:
 
 ```bash
 pnpm install
+```
+
+### 3. Configurar Variáveis de Ambiente
+
+Copie o arquivo de exemplo `.env.example` para `.env.local`:
+
+```bash
+cp .env.example .env.local
+```
+
+Abra o arquivo [`.env.local`](file:///Users/govinda/projetos/gemini-chatbot/.env.local) e configure as seguintes chaves:
+
+- `GOOGLE_GENERATIVE_AI_API_KEY`: Sua chave de API do Gemini (obtenha no [Google AI Studio](https://aistudio.google.com/)).
+- `AUTH_SECRET`: Uma chave secreta para a autenticação. Você pode gerar uma executando `openssl rand -base64 32` no seu terminal ou usando o [gerador online](https://generate-secret.vercel.app/32).
+- `POSTGRES_URL`: URL de conexão do PostgreSQL (ex: `postgres://usuario:senha@localhost:5432/nome_do_banco`).
+- `BLOB_READ_WRITE_TOKEN`: Token para o Vercel Blob (para upload de arquivos e imagens).
+
+### 4. Executar as Migrações do Banco de Dados
+
+Antes de iniciar a aplicação, crie e aplique as tabelas no seu banco de dados PostgreSQL usando o Drizzle ORM:
+
+```bash
+# Executa o script de migração
+pnpm tsx db/migrate
+```
+
+*(Opcional)* Se desejar visualizar ou gerenciar os dados visualmente através do Drizzle Studio:
+```bash
+pnpm drizzle-kit studio
+```
+
+### 5. Iniciar o Servidor de Desenvolvimento
+
+Agora você pode rodar a aplicação localmente:
+
+```bash
 pnpm dev
 ```
 
-Your app template should now be running on [localhost:3000](http://localhost:3000/).
+Abra [http://localhost:3000](http://localhost:3000) no seu navegador para ver o chatbot funcionando.
+
+---
+
+## 🚀 Funcionalidades
+
+- **Next.js App Router**: Utilização de React Server Components (RSCs), Server Actions e rotas otimizadas para excelente desempenho.
+- **Vercel AI SDK**: Integração unificada para geração de texto, chamadas de ferramentas (tool calling) e streaming de respostas.
+- **Persistência de Dados**:
+  - [Drizzle ORM](https://orm.drizzle.team/) com PostgreSQL para salvar o histórico de chats e sessões de usuários.
+  - [Vercel Blob](https://vercel.com/storage/blob) para armazenamento de objetos e arquivos de mídia.
+- **Autenticação**: Integrado com [NextAuth.js](https://next-auth.js.org) (v5 beta) para login e segurança do usuário.
+- **Interface Moderna (UI/UX)**: Estilização com Tailwind CSS, componentes acessíveis construídos com Radix UI e animações fluidas via Framer Motion.
+
+---
+
+## 🤖 Provedores de Modelos
+
+Este template vem configurado por padrão com os modelos do **Google Gemini** (como `gemini-1.5-pro` e `gemini-1.5-flash` através do `@ai-sdk/google`). 
+
+Caso queira utilizar outros provedores como OpenAI, Anthropic ou Cohere, o [Vercel AI SDK](https://sdk.vercel.ai/docs) permite a troca de maneira simples modificando poucas linhas no arquivo de configuração do provedor em `ai/`.
+
+---
+
+## 📂 Estrutura do Projeto
+
+Aqui está uma visão rápida dos principais diretórios:
+
+- **`app/`**: Rotas da aplicação (páginas de chat, autenticação e APIs).
+- **`components/`**: Componentes reutilizáveis da interface de usuário (UI).
+- **`db/`**: Configurações de banco de dados, schemas do Drizzle ORM (`schema.ts`) e scripts de migração (`migrate.ts`).
+- **`lib/`**: Utilitários gerais e hooks customizados.
+- **`ai/`**: Configurações específicas de modelos de IA e instâncias do SDK.
+
+---
+
+## ☁️ Deploy no Vercel
+
+Você pode fazer o deploy de sua própria versão com apenas um clique:
+
+[![Deploy com Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel-labs%2Fgemini-chatbot&env=AUTH_SECRET,GOOGLE_GENERATIVE_AI_API_KEY&envDescription=Learn%20more%20about%20how%20to%20get%20the%20API%20Keys%20for%20the%20application&envLink=https%3A%2F%2Fgithub.com%2Fvercel-labs%2Fgemini-chatbot%2Fblob%2Fmain%2F.env.example&demo-title=Next.js%20Gemini%20Chatbot&demo-description=An%20Open-Source%20AI%20Chatbot%20Template%20Built%20With%20Next.js%20and%20the%20AI%20SDK%20by%20Vercel.&demo-url=https%3A%2F%2Fgemini.vercel.ai&stores=[{%22type%22:%22postgres%22},{%22type%22:%22blob%22}])
+

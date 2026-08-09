@@ -33,6 +33,7 @@ export const login = async (
 
     return { status: "success" };
   } catch (error) {
+    console.error("LOGIN ACTION ERROR:", error);
     if (error instanceof z.ZodError) {
       return { status: "invalid_data" };
     }
@@ -76,6 +77,7 @@ export const register = async (
       return { status: "success" };
     }
   } catch (error) {
+    console.error("REGISTER ACTION ERROR:", error);
     if (error instanceof z.ZodError) {
       return { status: "invalid_data" };
     }

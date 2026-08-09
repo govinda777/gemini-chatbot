@@ -1,0 +1,42 @@
+[
+  {
+    "id": "pkg-batismo-pedra-bela",
+    "name": "Batismo de Escalada em Pedra Bela",
+    "difficulty": "iniciante",
+    "duration": "1 dia (5 horas)",
+    "priceInBRL": 277.0,
+    "originalPriceInBRL": 330.0,
+    "description": "Perfeito para quem nunca escalou na rocha! Inclui instrução básica, guias certificados, todos os equipamentos técnicos de segurança e fotos profissionais da sua subida.",
+    "location": "Pedra Bela - SP",
+    "inclusions": [
+      "✓🧗 Escalada em rocha natural",
+      "✓🛡️ Equipamento de segurança",
+      "✓👨‍🏫 Instrutor experiente",
+      "✓📋 Seguro Aventura",
+      "✓🍽️ Saboroso Almoço (restaurante à vontade)",
+      "✓🌅 Pôr do Sol Mirante com café",
+      "🎁 BÔNUS EXCLUSIVOS:",
+      "💡 Coach de vida"
+    ]
+  },
+  {
+    "id": "pkg-campo-escola-sao-bento",
+    "name": "Pacote AGARRÃO",
+    "difficulty": "iniciante",
+    "duration": "1 dias (5 horas)",
+    "priceInBRL": 277.0,
+    "originalPriceInBRL": 330.0,
+    "description": "Curta uma vivência de escalada na natureza.",
+    "location": "São Bento do Sapucaí - SP",
+    "inclusions": [
+      "✓🧗 Escalada em rocha natural",
+      "✓🛡️ Equipamento de segurança",
+      "✓👨‍🏫 Instrutor experiente",
+      "✓📋 Seguro Aventura",
+      "✓🍽️ Saboroso Almoço (restaurante à vontade)",
+      "✓🌅 Pôr do Sol Mirante com café",
+      "🎁 BÔNUS EXCLUSIVOS:",
+      "💡 Coach de vida"
+    ]
+  }
+]

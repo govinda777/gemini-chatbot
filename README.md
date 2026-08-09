@@ -93,6 +93,20 @@ Abra [http://localhost:3000](http://localhost:3000) no seu navegador para ver o 
 
 ---
 
+## 🛠️ Console Interativo de Ferramentas (Swagger)
+
+A aplicação conta com um playground interativo estilo **Swagger** para documentação e acionamento manual de todas as ferramentas (tools) registradas na aplicação.
+
+### Como acessar e testar:
+1. **Iniciar servidor:** Execute `pnpm dev` no seu terminal.
+2. **Swagger Console:** Acesse [http://localhost:3000/tools](http://localhost:3000/tools).
+3. **Endpoint de Metadados:** Caso precise inspecionar os schemas Zod de forma programática, acesse [http://localhost:3000/api/tools-metadata](http://localhost:3000/api/tools-metadata).
+
+> [!NOTE]
+> Essa documentação e os formulários de entrada são **100% dinâmicos**! Eles são gerados diretamente do código e schemas Zod do arquivo [`tools.ts`](file:///app/(chat)/api/chat/tools.ts). Qualquer alteração no código será refletida imediatamente.
+
+---
+
 ## 🚀 Funcionalidades
 
 - **Next.js App Router**: Utilização de React Server Components (RSCs), Server Actions e rotas otimizadas para excelente desempenho.
@@ -122,6 +136,38 @@ Aqui está uma visão rápida dos principais diretórios:
 - **`db/`**: Configurações de banco de dados, schemas do Drizzle ORM (`schema.ts`) e scripts de migração (`migrate.ts`).
 - **`lib/`**: Utilitários gerais e hooks customizados.
 - **`ai/`**: Configurações específicas de modelos de IA e instâncias do SDK.
+- **`docs/`**: Documentação técnica e registros de decisões de arquitetura.
+
+---
+
+## 📐 Decisões de Arquitetura (ADRs)
+
+Este projeto está passando por uma transição arquitetural para deixar de ser um simples bot de passagens aéreas e se tornar o **Agente de Atendimento Comercial e Suporte Oficial da Xperience Climb** ([climb.xperiencehubs.com](https://climb.xperiencehubs.com/)).
+
+Todas as decisões técnicas tomadas durante essa transição estão formalizadas e registradas em formato **ADR (Architecture Decision Records)** no diretório [`docs/adr/`](file:///Users/govinda/projetos/gemini-chatbot/docs/adr).
+
+### Índice das Decisões Principais:
+1. **[ADR-0001: Arquitetura RAG para Informações Públicas](file:///Users/govinda/projetos/gemini-chatbot/docs/adr/0001-arquitetura-rag-conteudo-publico.md)**: Abordagem híbrida e baseada em contexto estático/tools antes de escalar para banco vetorial `pgvector`.
+2. **[ADR-0002: Coleta de Leads e Feedback](file:///Users/govinda/projetos/gemini-chatbot/docs/adr/0002-coleta-de-leads-e-feedback.md)**: Captura de dados comercial integrada de forma nativa no Next.js, eliminando fluxos de n8n no-code.
+3. **[ADR-0003: Venda de Pacotes e Links de Pagamento](file:///Users/govinda/projetos/gemini-chatbot/docs/adr/0003-venda-de-pacotes-e-links-de-pagamento.md)**: Modelagem de pacotes de escalada e orquestração de checkout/pagamentos.
+4. **[ADR-0004: Adaptação da Interface do Usuário (UI)](file:///Users/govinda/projetos/gemini-chatbot/docs/adr/0004-adaptacao-da-interface-do-usuario.md)**: Adaptação visual da identidade e substituição de componentes aeronáuticos por cards de montanhismo.
+5. **[ADR-0005: Testes BDD e Validação de Chamadas de Ferramentas](file:///Users/govinda/projetos/gemini-chatbot/docs/adr/0005-testes-bdd-e-validacao-de-ferramentas.md)**: Implementação de testes robustos orientados a comportamento.
+6. **[ADR-0006: Infraestrutura, Pastas, Escalabilidade e DDoS](file:///Users/govinda/projetos/gemini-chatbot/docs/adr/0006-arquitetura-de-infraestrutura-pastas-e-seguranca.md)**: Definição de infraestrutura, pastas do projeto e proteção contra ataques.
+7. **[ADR-0007: Transformação Geral em Agente Xperience Climb](file:///Users/govinda/projetos/gemini-chatbot/docs/adr/0007-transformacao-em-agente-especialista-xperience-climb.md)**: Pivô estratégico para desativação das ferramentas de voo e transição de escopo da inteligência artificial.
+
+Para mais detalhes sobre as decisões e sua evolução, leia o [**README das ADRs**](file:///Users/govinda/projetos/gemini-chatbot/docs/adr/README.md).
+
+---
+
+## 🛠️ Personalização e Criação de Novas Ferramentas
+
+Para entender o fluxo técnico de funcionamento do bot e aprender a:
+* Customizar as regras de conversação e objetivos (*System Prompts*).
+* Criar novas ferramentas (*Tools*) de IA validadas com Zod.
+* Desenhar novos fluxos comerciais e de atendimento.
+
+Acesse o nosso [**Guia de Personalização do Chatbot**](file:///Users/govinda/projetos/gemini-chatbot/docs/customization-guide.md).
+
 
 ---
 

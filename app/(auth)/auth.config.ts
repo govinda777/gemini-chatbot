@@ -12,6 +12,11 @@ export const authConfig = {
   callbacks: {
     authorized({ auth, request: { nextUrl } }) {
       let isLoggedIn = !!auth?.user;
+      let isOnTestReport = nextUrl.pathname.startsWith("/test-report") || nextUrl.pathname.startsWith("/api/test-report");
+      if (isOnTestReport) {
+        return true;
+      }
+
       let isOnChat = nextUrl.pathname.startsWith("/");
       let isOnRegister = nextUrl.pathname.startsWith("/register");
       let isOnLogin = nextUrl.pathname.startsWith("/login");

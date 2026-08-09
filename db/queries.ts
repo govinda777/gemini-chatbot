@@ -5,11 +5,8 @@ import { desc, eq } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/postgres-js";
 import postgres from "postgres";
 
-import { user, chat, User, reservation } from "./schema";
+import { user, chat, User, reservation, lead, feedback, Lead, Feedback } from "./schema";
 
-// Optionally, if not using email/pass login, you can
-// use the Drizzle adapter for Auth.js / NextAuth
-// https://authjs.dev/reference/adapter/drizzle
 let client = postgres(`${process.env.POSTGRES_URL!}?sslmode=require`);
 let db = drizzle(client);
 
@@ -38,21 +35,24 @@ export async function saveChat({
   id,
   messages,
   userId,
+  skillId = "flights",
 }: {
   id: string;
   messages: any;
   userId: string;
+  skillId?: string;
 }) {
   try {
     const selectedChats = await db.select().from(chat).where(eq(chat.id, id));
 
     if (selectedChats.length > 0) {
       return await db
-        .update(chat)
-        .set({
-          messages: JSON.stringify(messages),
-        })
-        .where(eq(chat.id, id));
+          .update(chat)
+          .set({
+            messages: JSON.stringify(messages),
+            skillId,
+          })
+          .where(eq(chat.id, id));
     }
 
     return await db.insert(chat).values({
@@ -60,6 +60,7 @@ export async function saveChat({
       createdAt: new Date(),
       messages: JSON.stringify(messages),
       userId,
+      skillId,
     });
   } catch (error) {
     console.error("Failed to save chat in database");
@@ -139,4 +140,61 @@ export async function updateReservation({
       hasCompletedPayment,
     })
     .where(eq(reservation.id, id));
+}
+
+// ADR-0002 Queries
+export async function createLead({
+  name,
+  email,
+  whatsapp,
+  climbingExperience,
+  interestDetails,
+  userId,
+}: {
+  name: string;
+  email: string;
+  whatsapp: string;
+  climbingExperience: string;
+  interestDetails?: string;
+  userId?: string;
+}) {
+  try {
+    return await db.insert(lead).values({
+      createdAt: new Date(),
+      userId,
+      name,
+      email,
+      whatsapp,
+      climbingExperience,
+      interestDetails,
+    });
+  } catch (error) {
+    console.error("Failed to create lead in database", error);
+    throw error;
+  }
+}
+
+export async function createFeedback({
+  userId,
+  rating,
+  comment,
+  category,
+}: {
+  userId: string;
+  rating: number;
+  comment?: string;
+  category: string;
+}) {
+  try {
+    return await db.insert(feedback).values({
+      createdAt: new Date(),
+      userId,
+      rating,
+      comment,
+      category,
+    });
+  } catch (error) {
+    console.error("Failed to create feedback in database", error);
+    throw error;
+  }
 }

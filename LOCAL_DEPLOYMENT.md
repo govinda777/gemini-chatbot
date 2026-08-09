@@ -77,3 +77,5 @@ pnpm dev
 ```
 
 Abra [http://localhost:3000](http://localhost:3000) no seu navegador. O seu app estará rodando localmente na sua máquina, mas consumindo o banco de dados Neon e salvando imagens no Vercel Blob.
+
+> 🛠️ **Dica:** O comando `pnpm dev` agora executa uma análise automática das capacidades do assistente e exibe uma caixa informativa com os principais links da aplicação em execução. Você pode acessar a interface de testes Swagger das ferramentas diretamente em [http://localhost:3000/tools](http://localhost:3000/tools).

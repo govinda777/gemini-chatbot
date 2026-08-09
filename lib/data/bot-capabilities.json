@@ -1,0 +1,95 @@
+{
+  "generatedAt": "2026-08-09T23:30:51.442Z",
+  "skills": [
+    {
+      "id": "flights",
+      "name": "Flight Booking Specialist",
+      "tools": [
+        {
+          "name": "getWeather",
+          "purpose": "* Fetches real-time weather information and short term forecasts for any given coordinates."
+        },
+        {
+          "name": "displayFlightStatus",
+          "purpose": "* Shows current live flight information (delays, gate, status) for a flight number on a specific date."
+        },
+        {
+          "name": "searchFlights",
+          "purpose": "* Queries list of matching flight connections between origin and destination."
+        },
+        {
+          "name": "selectSeats",
+          "purpose": "* Fetches the cabin seat map layout and availability status for a selected flight."
+        },
+        {
+          "name": "createReservation",
+          "purpose": "* Initiates a pending flight reservation details record."
+        },
+        {
+          "name": "authorizePayment",
+          "purpose": "* Prompt flight payment authorization window."
+        },
+        {
+          "name": "verifyPayment",
+          "purpose": "* Queries payment status (database flag `hasCompletedPayment`) for either climbing booking or flight reservation."
+        },
+        {
+          "name": "displayBoardingPass",
+          "purpose": "* Outputs the formatted flight boarding ticket info structure."
+        }
+      ],
+      "flows": [
+        "you help users book flights!",
+        "keep your responses limited to a sentence.",
+        "DO NOT output lists.",
+        "after every tool call, pretend you're showing the result to the user and keep your response limited to a phrase.",
+        "today's date is 8/9/2026."
+      ]
+    },
+    {
+      "id": "xperience-climb",
+      "name": "Xperience Climb Specialist",
+      "tools": [
+        {
+          "name": "getWeather",
+          "purpose": "* Fetches real-time weather information and short term forecasts for any given coordinates."
+        },
+        {
+          "name": "searchClimbKnowledge",
+          "purpose": "* Queries the static climb safety, logistics, and destination guidelines (climb-knowledge.json)."
+        },
+        {
+          "name": "listClimbPackages",
+          "purpose": "* Lists the list of available climbing packages from `climb-packages.json`."
+        },
+        {
+          "name": "createClimbBooking",
+          "purpose": "* Places a climbing package booking reservation for the authenticated user."
+        },
+        {
+          "name": "generatePaymentLink",
+          "purpose": "* Generates mock Stripe payment links and PIX payload details for a given booking ID."
+        },
+        {
+          "name": "verifyPayment",
+          "purpose": "* Queries payment status (database flag `hasCompletedPayment`) for either climbing booking or flight reservation."
+        },
+        {
+          "name": "saveLeadInfo",
+          "purpose": "* Registers a customer's contact information (name, email, WhatsApp) into the database for sales outreach."
+        },
+        {
+          "name": "submitUserFeedback",
+          "purpose": "* Submits user satisfaction rating and feedback comments to the database."
+        }
+      ],
+      "flows": [
+        "Você é o Agente Especialista da Xperience Climb (climb.xperiencehubs.com).",
+        "Você ajuda os usuários a tirar dúvidas sobre montanhismo, segurança, destinos e a agendar pacotes de escalada reais.",
+        "SEMPRE atue com foco em segurança, aventura e profissionalismo.",
+        "Seja amigável, entusiasmado com a natureza, porém direto e profissional.",
+        "Mantenha suas respostas relativamente breves e concisas (limite a no máximo 2-3 frases por mensagem)."
+      ]
+    }
+  ]
+}

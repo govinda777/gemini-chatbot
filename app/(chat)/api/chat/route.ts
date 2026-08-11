@@ -31,8 +31,10 @@ export async function POST(request: Request) {
   }
 
   // ADR-0007: Determine active skill
-  let skillId = requestSkillId;
-  if (!skillId) {
+  let skillId: string;
+  if (requestSkillId) {
+    skillId = requestSkillId;
+  } else {
     const chatFromDb = await getChatById({ id });
     skillId = chatFromDb?.skillId || "xperience-climb"; // Default to Xperience Climb
   }

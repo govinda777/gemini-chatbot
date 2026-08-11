@@ -7,8 +7,24 @@ import postgres from "postgres";
 
 import { user, chat, User, reservation, lead, feedback, Lead, Feedback } from "./schema";
 
-let client = postgres(`${process.env.POSTGRES_URL!}?sslmode=require`);
-let db = drizzle(client);
+let client: ReturnType<typeof postgres> | null = null;
+let dbInstance: ReturnType<typeof drizzle> | null = null;
+
+const db = new Proxy({} as any, {
+  get(target, prop) {
+    if (!process.env.POSTGRES_URL) {
+      throw new Error("POSTGRES_URL environment variable is missing.");
+    }
+    if (!dbInstance) {
+      const url = process.env.POSTGRES_URL;
+      const connectionString = url.includes("sslmode") ? url : `${url}?sslmode=require`;
+      client = postgres(connectionString);
+      dbInstance = drizzle(client);
+    }
+    const value = (dbInstance as any)[prop];
+    return typeof value === 'function' ? value.bind(dbInstance) : value;
+  }
+});
 
 export async function getUser(email: string): Promise<Array<User>> {
   try {

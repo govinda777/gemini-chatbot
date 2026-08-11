@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+
 import { getReport, clearReport } from "@/lib/test-reporter";
 
 export async function GET() {

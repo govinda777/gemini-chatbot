@@ -37,5 +37,149 @@
     "totalTokens": 207,
     "costUSD": 0.000019574999999999998,
     "timestamp": "2026-08-09T23:49:06.817Z"
+  },
+  {
+    "source": "dev-chat",
+    "testName": "Chat Interativo (Skill: xperience-climb)",
+    "promptTokens": 957,
+    "completionTokens": 34,
+    "toolsTriggered": [],
+    "id": "g7d5oxj",
+    "totalTokens": 991,
+    "costUSD": 0.000081975,
+    "timestamp": "2026-08-10T00:04:10.397Z"
+  },
+  {
+    "source": "integration-test",
+    "testName": "Gemini deve interpretar o texto do usuário e acionar as ferramentas de Climb",
+    "promptTokens": 189,
+    "completionTokens": 18,
+    "toolsTriggered": [
+      "listClimbPackages"
+    ],
+    "id": "cezs9wn",
+    "totalTokens": 207,
+    "costUSD": 0.000019574999999999998,
+    "timestamp": "2026-08-10T00:07:19.693Z"
+  },
+  {
+    "source": "integration-test",
+    "testName": "Gemini deve interpretar o texto do usuário e acionar as ferramentas de Climb",
+    "promptTokens": 189,
+    "completionTokens": 18,
+    "toolsTriggered": [
+      "listClimbPackages"
+    ],
+    "id": "q26jlzk",
+    "totalTokens": 207,
+    "costUSD": 0.000019574999999999998,
+    "timestamp": "2026-08-10T00:07:38.810Z"
+  },
+  {
+    "source": "integration-test",
+    "testName": "Gemini deve interpretar o texto do usuário e acionar as ferramentas de Climb",
+    "promptTokens": 189,
+    "completionTokens": 18,
+    "toolsTriggered": [
+      "listClimbPackages"
+    ],
+    "id": "ayxeqdi",
+    "totalTokens": 207,
+    "costUSD": 0.000019574999999999998,
+    "timestamp": "2026-08-10T00:12:58.566Z"
+  },
+  {
+    "source": "integration-test",
+    "testName": "Gemini deve interpretar o texto do usuário e acionar as ferramentas de Climb",
+    "promptTokens": 189,
+    "completionTokens": 18,
+    "toolsTriggered": [
+      "listClimbPackages"
+    ],
+    "id": "ju5z1hk",
+    "totalTokens": 207,
+    "costUSD": 0.000019574999999999998,
+    "timestamp": "2026-08-10T00:18:00.826Z"
+  },
+  {
+    "source": "integration-test",
+    "testName": "Gemini deve interpretar o texto do usuário e acionar as ferramentas de Climb",
+    "promptTokens": 189,
+    "completionTokens": 18,
+    "toolsTriggered": [
+      "listClimbPackages"
+    ],
+    "id": "cp5jifg",
+    "totalTokens": 207,
+    "costUSD": 0.000019574999999999998,
+    "timestamp": "2026-08-10T00:19:22.053Z"
+  },
+  {
+    "source": "dev-chat",
+    "testName": "Chat Interativo (Skill: xperience-climb)",
+    "promptTokens": 949,
+    "completionTokens": 38,
+    "toolsTriggered": [],
+    "id": "ttnm76v",
+    "totalTokens": 987,
+    "costUSD": 0.00008257499999999999,
+    "timestamp": "2026-08-11T11:54:04.567Z"
+  },
+  {
+    "source": "dev-chat",
+    "testName": "Chat Interativo (Skill: xperience-climb)",
+    "promptTokens": 994,
+    "completionTokens": 49,
+    "toolsTriggered": [],
+    "id": "or20urv",
+    "totalTokens": 1043,
+    "costUSD": 0.00008925,
+    "timestamp": "2026-08-11T11:54:20.929Z"
+  },
+  {
+    "source": "dev-chat",
+    "testName": "Chat Interativo (Skill: xperience-climb)",
+    "promptTokens": 1044,
+    "completionTokens": 11,
+    "toolsTriggered": [],
+    "id": "3pxn9pq",
+    "totalTokens": 1055,
+    "costUSD": 0.00008159999999999999,
+    "timestamp": "2026-08-11T11:54:37.525Z"
+  },
+  {
+    "source": "dev-chat",
+    "testName": "Chat Interativo (Skill: xperience-climb)",
+    "promptTokens": 1451,
+    "completionTokens": 114,
+    "toolsTriggered": [],
+    "id": "rxt4qg5",
+    "totalTokens": 1565,
+    "costUSD": 0.000143025,
+    "timestamp": "2026-08-11T11:54:40.151Z"
+  },
+  {
+    "source": "dev-chat",
+    "testName": "Chat Interativo (Skill: xperience-climb)",
+    "promptTokens": 1569,
+    "completionTokens": 57,
+    "toolsTriggered": [],
+    "id": "69ae415",
+    "totalTokens": 1626,
+    "costUSD": 0.000134775,
+    "timestamp": "2026-08-11T11:56:23.718Z"
+  },
+  {
+    "source": "integration-test",
+    "testName": "Gemini deve interpretar o texto do usuário e acionar as ferramentas de Climb",
+    "promptTokens": 189,
+    "completionTokens": 18,
+    "toolsTriggered": [
+      "listClimbPackages"
+    ],
+    "id": "5umoab2",
+    "totalTokens": 207,
+    "costUSD": 0.000019574999999999998,
+    "timestamp": "2026-08-11T12:01:01.250Z"
   }
 ]

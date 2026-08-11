@@ -3,12 +3,12 @@ import { experimental_wrapLanguageModel as wrapLanguageModel } from "ai";
 
 import { customMiddleware } from "./custom-middleware";
 
-export const geminiProModel = wrapLanguageModel({
-  model: google("gemini-2.5-pro"),
-  middleware: customMiddleware,
-});
+const modelName = process.env.GEMINI_MODEL;
+if (!modelName) {
+  throw new Error("GEMINI_MODEL environment variable is required but not defined.");
+}
 
 export const geminiFlashModel = wrapLanguageModel({
-  model: google("gemini-2.5-flash"),
+  model: google(modelName),
   middleware: customMiddleware,
 });

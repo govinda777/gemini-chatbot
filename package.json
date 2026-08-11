@@ -7,7 +7,8 @@
     "build": "tsx scripts/analyze-bot.ts && tsx db/migrate && next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "vitest run"
+    "test": "vitest run",
+    "validate-env": "tsx scripts/validate-env.ts"
   },
   "dependencies": {
     "@ai-sdk/google": "^0.0.51",

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+
 import { ReportItem } from "@/lib/test-reporter";
 
 export default function TestReportPage() {
@@ -58,8 +59,8 @@ export default function TestReportPage() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 p-8 font-sans selection:bg-teal-500 selection:text-slate-900">
       {/* Glow Effects */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 left-1/4 size-96 bg-teal-500/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 size-96 bg-purple-500/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Header */}
@@ -95,12 +96,12 @@ export default function TestReportPage() {
 
         {loading ? (
           <div className="flex flex-col items-center justify-center py-20">
-            <div className="w-12 h-12 border-4 border-teal-500 border-t-transparent rounded-full animate-spin"></div>
+            <div className="size-12 border-4 border-teal-500 border-t-transparent rounded-full animate-spin"></div>
             <p className="text-slate-400 mt-4 animate-pulse">Carregando relatório de execuções...</p>
           </div>
         ) : report.length === 0 ? (
           <div className="border border-dashed border-slate-800 rounded-2xl p-12 text-center bg-slate-900/20 backdrop-blur-md">
-            <div className="w-16 h-16 bg-slate-900 border border-slate-800 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
+            <div className="size-16 bg-slate-900 border border-slate-800 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
               📈
             </div>
             <h3 className="text-lg font-semibold text-slate-200">Nenhum dado registrado</h3>

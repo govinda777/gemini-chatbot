@@ -342,7 +342,7 @@ export default function ToolsSwaggerPage() {
                                   id={`check-${param.name}`}
                                   checked={!!paramsInput[param.name]}
                                   onChange={(e) => handleInputChange(param.name, e.target.checked, param.type)}
-                                  className="rounded border-slate-800 bg-slate-950 text-orange-500 focus:ring-0 w-4 h-4 cursor-pointer"
+                                  className="rounded border-slate-800 bg-slate-950 text-orange-500 focus:ring-0 size-4 cursor-pointer"
                                 />
                                 <label htmlFor={`check-${param.name}`} className="text-xs text-slate-400 cursor-pointer">
                                   {param.description}

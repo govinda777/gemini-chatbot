@@ -79,3 +79,16 @@ pnpm dev
 Abra [http://localhost:3000](http://localhost:3000) no seu navegador. O seu app estará rodando localmente na sua máquina, mas consumindo o banco de dados Neon e salvando imagens no Vercel Blob.
 
 > 🛠️ **Dica:** O comando `pnpm dev` agora executa uma análise automática das capacidades do assistente e exibe uma caixa informativa com os principais links da aplicação em execução. Você pode acessar a interface de testes Swagger das ferramentas diretamente em [http://localhost:3000/tools](http://localhost:3000/tools).
+
+---
+
+### Passo 7: Fazer Deploy para Produção (Via Linha de Comando)
+Criamos um script utilitário chamado [`scripts/deploy.sh`](file:///Users/govinda/projetos/gemini-chatbot/scripts/deploy.sh) que automatiza todo o processo de deploy:
+1. Sincroniza as variáveis de ambiente locais essenciais (`AUTH_SECRET`, `GOOGLE_GENERATIVE_AI_API_KEY`, `GEMINI_MODEL`, `POSTGRES_URL`) direto para o painel da Vercel.
+2. Executa as migrações necessárias no banco do Neon.
+3. Faz o deploy final em Produção no Vercel.
+
+Para usá-lo, execute:
+```bash
+./scripts/deploy.sh
+```

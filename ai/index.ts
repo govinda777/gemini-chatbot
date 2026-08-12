@@ -1,7 +1,11 @@
-import { google } from "@ai-sdk/google";
+import { createGoogleGenerativeAI } from "@ai-sdk/google";
 import { experimental_wrapLanguageModel as wrapLanguageModel } from "ai";
 
 import { customMiddleware } from "./custom-middleware";
+
+const google = createGoogleGenerativeAI({
+  apiKey: process.env.GOOGLE_GENERATIVE_AI_API_KEY || process.env.GEMINI_API_KEY,
+});
 
 let wrappedModel: any = null;
 

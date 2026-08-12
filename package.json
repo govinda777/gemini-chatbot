@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "test": "vitest run",
-    "validate-env": "tsx scripts/validate-env.ts"
+    "validate-env": "tsx scripts/validate-env.ts",
+    "deploy": "bash scripts/deploy.sh"
   },
   "dependencies": {
     "@ai-sdk/google": "^0.0.51",

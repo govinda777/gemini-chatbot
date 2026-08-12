@@ -8,23 +8,17 @@
     {
       "name": "Pedra Bela",
       "location": "Pedra Bela - SP",
-      "details": "Vias em rocha de granito de alta aderência. O local conta com o maior campo escola da região e a maior tirolesa das Américas. Perfeito para batismos e cursos.",
+      "details": "Destino de escalada em formações rochosas únicas, com paisagens deslumbrantes e vias desafiadoras para todos os níveis. Vagas abertas a cada 2 meses para vivência de escalada. Por enquanto, este é o nosso único destino ativo (em breve teremos outros destinos).",
       "best_season": "Estação seca, de Abril a Outubro."
-    },
-    {
-      "name": "Setor Escola dos Fundos",
-      "location": "São Bento do Sapucaí - SP",
-      "details": "Complexo rochoso didático com vias protegidas por chapeletas inox, ideais para o ensino de técnicas de escalada em rocha para iniciantes e guiada básica.",
-      "best_season": "O ano todo, preferencialmente outono e inverno."
     }
   ],
   "logistics": {
-    "meeting_point": "O ponto de encontro padrão é na base ou recepção do setor em Pedra Bela/São Bento às 08:00 AM.",
+    "meeting_point": "O ponto de encontro padrão para Pedra Bela é na Padaria São João de Pedra Bela (https://google.com/maps/place/Padaria+S%C3%A3o+Jo%C3%A3o+de+Pedra+Bela./@-22.793404,-46.4509145,1257m/data=!3m1!1e3!4m6!3m5!1s0x94c94b8173c9fc59:0x10b92ab136c280a8!8m2!3d-22.7943225!4d-46.4431145!16s%2Fg%2F11g5zwbjyl?entry=tts&g_ep=EgoyMDI2MDYyOS4wIPu8ASoASAFQAw%3D%3D&skid=fd7e5c3a-4044-4189-98de-cfc5636d19e5), onde faremos um café da manhã juntos antes de iniciar a vivência.",
     "transport": "Transporte terrestre até os pontos de escalada não está incluso por padrão, mas fornecemos indicações de transfer parceiros e caronas ecológicas combinadas no grupo.",
     "checklist": "Recomendado levar: mochila leve (20L), 2 litros de água, pequenos lanches, protetor solar, repelente de insetos, calçado fechado (tênis/bota) e cortador de vento leve."
   },
   "meta": {
-    "scrapedAt": "2026-08-09T20:54:22.680Z",
+    "scrapedAt": "2026-08-11T23:45:22.295Z",
     "siteTitle": "Xperience Climb | Escalada Pedra Bela",
     "siteDescription": "Descubra a liberdade de escalar em rocha natural. Experiências guiadas exclusivas de escalada e aventura em Pedra Bela.",
     "source": "https://climb.xperiencehubs.com/"

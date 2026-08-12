@@ -5,7 +5,7 @@ description: Scrapes climb.xperiencehubs.com and loads public mountaineering inf
 
 # Climb Scraper Skill
 
-Esta skill permite raspar a página pública da **Xperience Climb** ([climb.xperiencehubs.com](https://climb.xperiencehubs.com/)) e atualizar dinamicamente a base de conhecimento local em [`lib/data/climb-knowledge.json`](file:///Users/govinda/projetos/gemini-chatbot/lib/data/climb-knowledge.json).
+Esta skill permite raspar a página pública da **Xperience Climb** ([climb.xperiencehubs.com](https://climb.xperiencehubs.com/)) e atualizar dinamicamente a base de conhecimento local em [`lib/data/climb-knowledge.json`](/gemini-chatbot/lib/data/climb-knowledge.json).
 
 ## 🚀 Como Executar
 

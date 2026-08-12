@@ -1,6 +1,6 @@
 # Guia de Configuração de Variáveis de Ambiente (`.env.local`)
 
-Este guia detalha cada uma das variáveis de ambiente necessárias para o funcionamento do **Gemini Chatbot**, explicando sua finalidade, como obtê-la e como configurá-la de forma correta no seu arquivo [`.env.local`](file:///Users/govinda/projetos/gemini-chatbot/.env.local).
+Este guia detalha cada uma das variáveis de ambiente necessárias para o funcionamento do **Gemini Chatbot**, explicando sua finalidade, como obtê-la e como configurá-la de forma correta no seu arquivo [`.env.local`](./.env.local).
 
 ---
 
@@ -116,7 +116,7 @@ Este guia detalha cada uma das variáveis de ambiente necessárias para o funcio
 
 ## 🔍 Como Validar a Configuração
 
-Depois de preencher todas as chaves no seu arquivo [`.env.local`](file:///Users/govinda/projetos/gemini-chatbot/.env.local), execute o comando de diagnóstico integrado:
+Depois de preencher todas as chaves no seu arquivo [`.env.local`](./.env.local), execute o comando de diagnóstico integrado:
 
 ```bash
 pnpm validate-env

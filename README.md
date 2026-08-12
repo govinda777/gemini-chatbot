@@ -60,7 +60,7 @@ Copie o arquivo de exemplo `.env.example` para `.env.local`:
 cp .env.example .env.local
 ```
 
-Abra o arquivo [`.env.local`](file:///Users/govinda/projetos/gemini-chatbot/.env.local) e configure as seguintes chaves:
+Abra o arquivo [`.env.local`](./.env.local) e configure as seguintes chaves:
 
 - `GOOGLE_GENERATIVE_AI_API_KEY`: Sua chave de API do Gemini (obtenha no [Google AI Studio](https://aistudio.google.com/)).
 - `AUTH_SECRET`: Uma chave secreta para a autenticação. Você pode gerar uma executando `openssl rand -base64 32` no seu terminal ou usando o [gerador online](https://generate-secret.vercel.app/32).
@@ -144,29 +144,30 @@ Aqui está uma visão rápida dos principais diretórios:
 
 Este projeto está passando por uma transição arquitetural para deixar de ser um simples bot de passagens aéreas e se tornar o **Agente de Atendimento Comercial e Suporte Oficial da Xperience Climb** ([climb.xperiencehubs.com](https://climb.xperiencehubs.com/)).
 
-Todas as decisões técnicas tomadas durante essa transição estão formalizadas e registradas em formato **ADR (Architecture Decision Records)** no diretório [`docs/adr/`](file:///Users/govinda/projetos/gemini-chatbot/docs/adr).
+Todas as decisões técnicas tomadas durante essa transição estão formalizadas e registradas em formato **ADR (Architecture Decision Records)** no diretório [`docs/adr/`](./docs/adr).
 
 ### Índice das Decisões Principais:
-1. **[ADR-0001: Arquitetura RAG para Informações Públicas](file:///Users/govinda/projetos/gemini-chatbot/docs/adr/0001-arquitetura-rag-conteudo-publico.md)**: Abordagem híbrida e baseada em contexto estático/tools antes de escalar para banco vetorial `pgvector`.
-2. **[ADR-0002: Coleta de Leads e Feedback](file:///Users/govinda/projetos/gemini-chatbot/docs/adr/0002-coleta-de-leads-e-feedback.md)**: Captura de dados comercial integrada de forma nativa no Next.js, eliminando fluxos de n8n no-code.
-3. **[ADR-0003: Venda de Pacotes e Links de Pagamento](file:///Users/govinda/projetos/gemini-chatbot/docs/adr/0003-venda-de-pacotes-e-links-de-pagamento.md)**: Modelagem de pacotes de escalada e orquestração de checkout/pagamentos.
-4. **[ADR-0004: Adaptação da Interface do Usuário (UI)](file:///Users/govinda/projetos/gemini-chatbot/docs/adr/0004-adaptacao-da-interface-do-usuario.md)**: Adaptação visual da identidade e substituição de componentes aeronáuticos por cards de montanhismo.
-5. **[ADR-0005: Testes BDD e Validação de Chamadas de Ferramentas](file:///Users/govinda/projetos/gemini-chatbot/docs/adr/0005-testes-bdd-e-validacao-de-ferramentas.md)**: Implementação de testes robustos orientados a comportamento.
-6. **[ADR-0006: Infraestrutura, Pastas, Escalabilidade e DDoS](file:///Users/govinda/projetos/gemini-chatbot/docs/adr/0006-arquitetura-de-infraestrutura-pastas-e-seguranca.md)**: Definição de infraestrutura, pastas do projeto e proteção contra ataques.
-7. **[ADR-0007: Transformação Geral em Agente Xperience Climb](file:///Users/govinda/projetos/gemini-chatbot/docs/adr/0007-transformacao-em-agente-especialista-xperience-climb.md)**: Pivô estratégico para desativação das ferramentas de voo e transição de escopo da inteligência artificial.
+1. **[ADR-0001: Arquitetura RAG para Informações Públicas](./docs/adr/0001-arquitetura-rag-conteudo-publico.md)**: Abordagem híbrida e baseada em contexto estático/tools antes de escalar para banco vetorial `pgvector`.
+2. **[ADR-0002: Coleta de Leads e Feedback](./docs/adr/0002-coleta-de-leads-e-feedback.md)**: Captura de dados comercial integrada de forma nativa no Next.js, eliminando fluxos de n8n no-code.
+3. **[ADR-0003: Venda de Pacotes e Links de Pagamento](./docs/adr/0003-venda-de-pacotes-e-links-de-pagamento.md)**: Modelagem de pacotes de escalada e orquestração de checkout/pagamentos.
+4. **[ADR-0004: Adaptação da Interface do Usuário (UI)](./docs/adr/0004-adaptacao-da-interface-do-usuario.md)**: Adaptação visual da identidade e substituição de componentes aeronáuticos por cards de montanhismo.
+5. **[ADR-0005: Testes BDD e Validação de Chamadas de Ferramentas](./docs/adr/0005-testes-bdd-e-validacao-de-ferramentas.md)**: Implementação de testes robustos orientados a comportamento.
+6. **[ADR-0006: Infraestrutura, Pastas, Escalabilidade e DDoS](./docs/adr/0006-arquitetura-de-infraestrutura-pastas-e-seguranca.md)**: Definição de infraestrutura, pastas do projeto e proteção contra ataques.
+7. **[ADR-0007: Transformação Geral em Agente Xperience Climb](./docs/adr/0007-transformacao-em-agente-especialista-xperience-climb.md)**: Pivô estratégico para desativação das ferramentas de voo e transição de escopo da inteligência artificial.
 
-Para mais detalhes sobre as decisões e sua evolução, leia o [**README das ADRs**](file:///Users/govinda/projetos/gemini-chatbot/docs/adr/README.md).
+Para mais detalhes sobre as decisões e sua evolução, leia o [**README das ADRs**](./docs/adr/README.md).
 
 ---
 
-## 🛠️ Personalização e Criação de Novas Ferramentas
+## 🛠️ Personalização, Componentes e Criação de Novas Ferramentas
 
 Para entender o fluxo técnico de funcionamento do bot e aprender a:
 * Customizar as regras de conversação e objetivos (*System Prompts*).
 * Criar novas ferramentas (*Tools*) de IA validadas com Zod.
 * Desenhar novos fluxos comerciais e de atendimento.
+* Compreender como a IA utiliza componentes visuais customizados para o fluxo de montanhismo.
 
-Acesse o nosso [**Guia de Personalização do Chatbot**](file:///Users/govinda/projetos/gemini-chatbot/docs/customization-guide.md).
+Acesse a nossa **[Central de Documentação](/docs/README.md)** para visualizar todos os manuais disponíveis.
 
 
 ---

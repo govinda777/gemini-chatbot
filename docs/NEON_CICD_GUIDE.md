@@ -77,7 +77,7 @@ jobs:
 ## 📈 Melhores Práticas para Migrações de Banco de Dados
 
 ### 1. Migrações no Build (Ativado por padrão neste projeto)
-No arquivo [`package.json`](file:///Users/govinda/projetos/gemini-chatbot/package.json), o comando de build está configurado para:
+No arquivo [`package.json`](./package.json), o comando de build está configurado para:
 ```bash
 tsx db/migrate && next build
 ```

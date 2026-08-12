@@ -15,7 +15,7 @@ Instale as dependências locais utilizando o `pnpm`:
 pnpm install
 ```
 
-> 💡 **Nota:** O arquivo [`package.json`](file:///Users/govinda/projetos/gemini-chatbot/package.json) já vem pré-configurado com a seção `"pnpm.only-built-dependencies"` para autorizar a compilação necessária de pacotes do ecossistema Next.js/pnpm v11.
+> 💡 **Nota:** O arquivo [`package.json`](./package.json) já vem pré-configurado com a seção `"pnpm.only-built-dependencies"` para autorizar a compilação necessária de pacotes do ecossistema Next.js/pnpm v11.
 
 ---
 
@@ -56,7 +56,7 @@ Se você já configurou chaves adicionais (como `GOOGLE_GENERATIVE_AI_API_KEY` o
 ```bash
 vercel env pull .env.local
 ```
-*Isso garante que todas as outras chaves também estejam unificadas no seu arquivo [`.env.local`](file:///Users/govinda/projetos/gemini-chatbot/.env.local).*
+*Isso garante que todas as outras chaves também estejam unificadas no seu arquivo [`.env.local`](./.env.local).*
 
 ---
 
@@ -83,7 +83,7 @@ Abra [http://localhost:3000](http://localhost:3000) no seu navegador. O seu app 
 ---
 
 ### Passo 7: Fazer Deploy para Produção (Via Linha de Comando)
-Criamos um script utilitário chamado [`scripts/deploy.sh`](file:///Users/govinda/projetos/gemini-chatbot/scripts/deploy.sh) que automatiza todo o processo de deploy:
+Criamos um script utilitário chamado [`scripts/deploy.sh`](./scripts/deploy.sh) que automatiza todo o processo de deploy:
 1. Sincroniza as variáveis de ambiente locais essenciais (`AUTH_SECRET`, `GOOGLE_GENERATIVE_AI_API_KEY`, `GEMINI_MODEL`, `POSTGRES_URL`) direto para o painel da Vercel.
 2. Executa as migrações necessárias no banco do Neon.
 3. Faz o deploy final em Produção no Vercel.

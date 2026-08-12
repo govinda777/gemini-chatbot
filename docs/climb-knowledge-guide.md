@@ -1,6 +1,6 @@
 # Guia de Edição da Base de Conhecimento (climb-knowledge.json)
 
-Este guia explica a estrutura do arquivo [`lib/data/climb-knowledge.json`](file:///Users/govinda/projetos/gemini-chatbot/lib/data/climb-knowledge.json), que atua como o banco de dados RAG (Retrieval-Augmented Generation) para responder a dúvidas de clientes da **Xperience Climb**.
+Este guia explica a estrutura do arquivo [`lib/data/climb-knowledge.json`](./lib/data/climb-knowledge.json), que atua como o banco de dados RAG (Retrieval-Augmented Generation) para responder a dúvidas de clientes da **Xperience Climb**.
 
 ---
 

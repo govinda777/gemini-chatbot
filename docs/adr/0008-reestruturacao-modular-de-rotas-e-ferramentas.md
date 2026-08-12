@@ -8,8 +8,8 @@ Proposto
 
 ## Contexto
 Atualmente, as rotas e ferramentas (*tools*) do agente de IA estão centralizadas em arquivos únicos:
-*   [`app/(chat)/api/chat/route.ts`](file:///Users/govinda/projetos/gemini-chatbot/app/(chat)/api/chat/route.ts): Centraliza o parsing de requisições, rate limiting, gerenciamento de histórico e execução de streaming.
-*   [`app/(chat)/api/chat/tools.ts`](file:///Users/govinda/projetos/gemini-chatbot/app/(chat)/api/chat/tools.ts): Contém a declaração e a lógica de execução de todas as ferramentas de todos os domínios (voos, RAG, leads, feedback, clima).
+*   [`app/(chat)/api/chat/route.ts`](./app/(chat)/api/chat/route.ts): Centraliza o parsing de requisições, rate limiting, gerenciamento de histórico e execução de streaming.
+*   [`app/(chat)/api/chat/tools.ts`](./app/(chat)/api/chat/tools.ts): Contém a declaração e a lógica de execução de todas as ferramentas de todos os domínios (voos, RAG, leads, feedback, clima).
 
 Conforme novos domínios e clientes comerciais forem adicionados ao chatbot, essa centralização causará:
 1.  **Dificuldade de Manutenção**: Arquivos muito extensos com diversas responsabilidades acopladas de setores de negócio diferentes.

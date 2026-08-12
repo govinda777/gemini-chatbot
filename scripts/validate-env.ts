@@ -3,7 +3,7 @@ process.removeAllListeners('warning');
 
 import { config } from "dotenv";
 import postgres from "postgres";
-import { google } from "@ai-sdk/google";
+import { createGoogleGenerativeAI } from "@ai-sdk/google";
 import { generateText } from "ai";
 import { list } from "@vercel/blob";
 
@@ -89,13 +89,13 @@ async function validateEnv() {
   }
   console.log("");
 
-  // 4. Validate and test GOOGLE_GENERATIVE_AI_API_KEY and GEMINI_MODEL
-  console.log("🤖 Checking GOOGLE_GENERATIVE_AI_API_KEY and Gemini API...");
-  const geminiKey = process.env.GOOGLE_GENERATIVE_AI_API_KEY;
+  // 4. Validate and test GOOGLE_GENERATIVE_AI_API_KEY / GEMINI_API_KEY and GEMINI_MODEL
+  console.log("🤖 Checking Gemini API credentials and connection...");
+  const geminiKey = process.env.GOOGLE_GENERATIVE_AI_API_KEY || process.env.GEMINI_API_KEY;
   const modelName = process.env.GEMINI_MODEL;
   
   if (!geminiKey) {
-    console.error("❌ GOOGLE_GENERATIVE_AI_API_KEY is missing or empty.");
+    console.error("❌ GOOGLE_GENERATIVE_AI_API_KEY (or GEMINI_API_KEY) is missing or empty.");
     hasErrors = true;
   }
   if (!modelName) {
@@ -106,9 +106,12 @@ async function validateEnv() {
   if (geminiKey && modelName) {
     try {
       console.log(`   (Using model: ${modelName})`);
+      const googleProvider = createGoogleGenerativeAI({
+        apiKey: geminiKey,
+      });
       // Test Gemini API with a minimal completion request
       const { text } = await generateText({
-        model: google(modelName),
+        model: googleProvider(modelName),
         prompt: "Say 'Hello' back if you can hear me.",
         maxTokens: 5,
       });

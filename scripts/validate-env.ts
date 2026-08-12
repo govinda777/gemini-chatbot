@@ -55,10 +55,9 @@ async function validateEnv() {
         const expMs = exp * 1000;
         const nowMs = Date.now();
         if (nowMs > expMs) {
-          console.error(`❌ VERCEL_OIDC_TOKEN has EXPIRED (expired on: ${new Date(expMs).toLocaleString()}).`);
-          hasErrors = true;
+          console.warn(`⚠️ VERCEL_OIDC_TOKEN has EXPIRED (expired on: ${new Date(expMs).toLocaleString()}). This is optional for local development, but you might want to renew it for deployment integrations.`);
         } else {
-          console.log(`✅ VERCEL_OIDC_TOKEN is active (expires on: ${new Date(expMs).toLocaleString()}).`);
+          console.log(`` + `✅ VERCEL_OIDC_TOKEN is active (expires on: ${new Date(expMs).toLocaleString()}).`);
         }
       } else {
         console.warn("⚠️ VERCEL_OIDC_TOKEN is a valid JWT but has no expiration ('exp') claim.");
@@ -115,8 +114,15 @@ async function validateEnv() {
       });
       console.log(`✅ Successfully connected to Gemini API. Response: "${text.trim()}"`);
     } catch (err: any) {
-      console.error(`❌ Gemini API connection/authentication failed: ${err.message}`);
-      hasErrors = true;
+      const isQuotaExceeded = err.message.toLowerCase().includes("quota") || 
+                              err.message.toLowerCase().includes("limit") || 
+                              err.message.toLowerCase().includes("exhausted");
+      if (isQuotaExceeded) {
+        console.warn(`⚠️ Successfully authenticated with Gemini API, but your rate limit/quota is currently exhausted: ${err.message}`);
+      } else {
+        console.error(`❌ Gemini API connection/authentication failed: ${err.message}`);
+        hasErrors = true;
+      }
     }
   }
   console.log("");

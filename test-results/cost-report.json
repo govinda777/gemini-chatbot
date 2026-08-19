@@ -304,5 +304,18 @@
     "totalTokens": 2517,
     "costUSD": 0.000231525,
     "timestamp": "2026-08-12T00:16:25.999Z"
+  },
+  {
+    "source": "integration-test",
+    "testName": "Gemini deve interpretar o texto do usuário e acionar as ferramentas de Climb",
+    "promptTokens": 189,
+    "completionTokens": 18,
+    "toolsTriggered": [
+      "listClimbPackages"
+    ],
+    "id": "m4xcs7i",
+    "totalTokens": 207,
+    "costUSD": 0.000019574999999999998,
+    "timestamp": "2026-08-19T03:02:10.620Z"
   }
 ]

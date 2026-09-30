@@ -10,7 +10,7 @@ O chatbot baseia-se em uma arquitetura de **Orquestração Dinâmica de Contexto
 
 ### A. Fluxo de Conversação e Inicialização
 1.  **Entrada do Usuário**: A requisição chega à rota [`route.ts`](./app/%28chat%29/api/chat/route.ts).
-2.  **Identificação do Contexto (Skill)**: A API verifica o `skillId` ativo (ex: `xperience-climb` para o bot de montanhismo).
+2.  **Identificação do Contexto (Skill)**: A API verifica o `skillId` ativo (ex: `xperience-climb` para o bot de escalada).
 3.  **Injeção de Prompts & Sandboxing**:
     *   A API carrega a configuração da skill a partir do [`skills-registry.ts`](./lib/ai/skills-registry.ts).
     *   O `systemPrompt` específico da skill é inserido como prompt do sistema.

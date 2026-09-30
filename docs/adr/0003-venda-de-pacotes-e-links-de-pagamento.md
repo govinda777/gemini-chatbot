@@ -7,7 +7,7 @@ Proposto
 2026-08-08
 
 ## Contexto
-O atual chatbot simula a reserva de passagens aéreas e assentos, gerando um preço fictício e um status de pagamento. Na **Xperience Climb**, o modelo de negócio consiste em vender pacotes de experiências de escalada, cursos e expedições de montanhismo.
+O atual chatbot simula a reserva de passagens aéreas e assentos, gerando um preço fictício e um status de pagamento. Na **Xperience Climb**, o modelo de negócio consiste em vender pacotes de experiências de escalada, cursos e expedições de escalada.
 O agente precisa ser capaz de:
 1. Apresentar os pacotes disponíveis (preço, duração, inclusões, local).
 2. Solicitar detalhes do agendamento (data desejada e número de participantes).

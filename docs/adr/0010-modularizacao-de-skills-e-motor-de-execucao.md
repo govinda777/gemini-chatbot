@@ -40,7 +40,7 @@ export interface SkillModule {
 Cada Skill será organizada em seu próprio subdiretório dentro de `lib/skills/`:
 *   `lib/skills/climb/`
     *   `index.ts` (Exporta a implementação de `SkillModule` da Xperience Climb)
-    *   `prompt.ts` (Instruções e regras de segurança do montanhismo)
+    *   `prompt.ts` (Instruções e regras de segurança da escalada)
     *   `tools.ts` (Declarações Zod e código de execução das ferramentas específicas chamadas pela IA)
     *   `actions.ts` (Server Actions do Next.js utilizadas pela UI client-side específicas deste domínio)
     *   `knowledge.ts` (Lógica de busca na base de dados RAG local)

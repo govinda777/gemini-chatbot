@@ -16,3 +16,5 @@ Este diretório contém os registros de decisões de arquitetura (ADRs) para a t
 | [ADR-0008](file:///Users/govinda/projetos/gemini-chatbot/docs/adr/0008-reestruturacao-modular-de-rotas-e-ferramentas.md) | Reestruturação Modular de Rotas e Ferramentas (Tools) de IA | Proposto | 2026-08-09 |
 | [ADR-0009](file:///Users/govinda/projetos/gemini-chatbot/docs/adr/0009-documentacao-e-playground-dinamico-de-tools.md) | Documentação Viva e Playground Dinâmico de Tools | Implementado | 2026-08-09 |
 | [ADR-0010](file:///Users/govinda/projetos/gemini-chatbot/docs/adr/0010-modularizacao-de-skills-e-motor-de-execucao.md) | Modularização de Habilidades (Skills) e Desacoplamento do Motor | Proposto | 2026-08-11 |
+| [ADR-0011](file:///Users/govinda/projetos/gemini-chatbot/docs/adr/0011-padronizacao-modular-multi-skills-e-fluxos.md) | Padronização da Arquitetura Modular de Multi-Skills com Fluxos e Ferramentas Isolados | Aprovado | 2026-08-12 |
+| [ADR-0012](file:///Users/govinda/projetos/gemini-chatbot/docs/adr/0012-fsm-orientada-por-ferramentas-skill-climb.md) | Implementação de FSM Orientada por Ferramentas (Hard Guardrails) na Skill Xperience Climb | Aprovado | 2026-08-12 |

@@ -11,7 +11,7 @@ O agente da **Xperience Climb** precisa responder a dúvidas comuns dos usuário
 Essas informações incluem:
 - Detalhes de escalada para iniciantes (Campo Escola, Setor dos Fundos).
 - Padrões de segurança, equipamentos inclusos e guias.
-- Destinos de montanhismo e pacotes ativos (como o programa Xperience Anual em Pedra Bela).
+- Destinos de escalada e pacotes ativos (como o programa Xperience Anual em Pedra Bela).
 - Logística de transporte, pontos de encontro e pré-requisitos físicos.
 
 Como o volume de dados da plataforma é pequeno a moderado, precisamos definir uma abordagem de recuperação de informações (RAG - Retrieval-Augmented Generation) que seja ágil, de baixo custo e precisa.

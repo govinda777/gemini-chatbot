@@ -150,7 +150,7 @@ Todas as decisões técnicas tomadas durante essa transição estão formalizada
 1. **[ADR-0001: Arquitetura RAG para Informações Públicas](./docs/adr/0001-arquitetura-rag-conteudo-publico.md)**: Abordagem híbrida e baseada em contexto estático/tools antes de escalar para banco vetorial `pgvector`.
 2. **[ADR-0002: Coleta de Leads e Feedback](./docs/adr/0002-coleta-de-leads-e-feedback.md)**: Captura de dados comercial integrada de forma nativa no Next.js, eliminando fluxos de n8n no-code.
 3. **[ADR-0003: Venda de Pacotes e Links de Pagamento](./docs/adr/0003-venda-de-pacotes-e-links-de-pagamento.md)**: Modelagem de pacotes de escalada e orquestração de checkout/pagamentos.
-4. **[ADR-0004: Adaptação da Interface do Usuário (UI)](./docs/adr/0004-adaptacao-da-interface-do-usuario.md)**: Adaptação visual da identidade e substituição de componentes aeronáuticos por cards de montanhismo.
+4. **[ADR-0004: Adaptação da Interface do Usuário (UI)](./docs/adr/0004-adaptacao-da-interface-do-usuario.md)**: Adaptação visual da identidade e substituição de componentes aeronáuticos por cards de escalada.
 5. **[ADR-0005: Testes BDD e Validação de Chamadas de Ferramentas](./docs/adr/0005-testes-bdd-e-validacao-de-ferramentas.md)**: Implementação de testes robustos orientados a comportamento.
 6. **[ADR-0006: Infraestrutura, Pastas, Escalabilidade e DDoS](./docs/adr/0006-arquitetura-de-infraestrutura-pastas-e-seguranca.md)**: Definição de infraestrutura, pastas do projeto e proteção contra ataques.
 7. **[ADR-0007: Transformação Geral em Agente Xperience Climb](./docs/adr/0007-transformacao-em-agente-especialista-xperience-climb.md)**: Pivô estratégico para desativação das ferramentas de voo e transição de escopo da inteligência artificial.
@@ -165,7 +165,7 @@ Para entender o fluxo técnico de funcionamento do bot e aprender a:
 * Customizar as regras de conversação e objetivos (*System Prompts*).
 * Criar novas ferramentas (*Tools*) de IA validadas com Zod.
 * Desenhar novos fluxos comerciais e de atendimento.
-* Compreender como a IA utiliza componentes visuais customizados para o fluxo de montanhismo.
+* Compreender como a IA utiliza componentes visuais customizados para o fluxo de escalada.
 
 Acesse a nossa **[Central de Documentação](/docs/README.md)** para visualizar todos os manuais disponíveis.
 

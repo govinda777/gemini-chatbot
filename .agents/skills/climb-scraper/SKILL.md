@@ -19,6 +19,6 @@ pnpm tsx .agents/skills/climb-scraper/scripts/scrape.ts
 
 O script executa as seguintes tarefas:
 1. Faz o download do código HTML do site de escalada.
-2. Extrai informações sobre segurança, destinos de montanhismo e guias disponíveis.
+2. Extrai informações sobre segurança, destinos de escalada e guias disponíveis.
 3. Formata os dados extraídos no padrão esperado pela aplicação.
 4. Sobrescreve o arquivo `lib/data/climb-knowledge.json` com o novo conteúdo estruturado.

@@ -11,7 +11,7 @@ O template de chatbot atual possui elementos visuais e componentes fortemente at
 Para a **Xperience Climb**, a interface precisa transmitir o espírito de aventura ao ar livre, esportes na natureza, profissionalismo, segurança e exclusividade. O design deve causar um impacto visual premium de alta qualidade (Rich Aesthetics), com paletas de cores refinadas e micro-interações fluidas.
 
 ## Decisão
-Reformularemos a interface do usuário adaptando os componentes visuais para o universo de montanhismo e aplicando uma identidade visual moderna (Earthy Dark Mode / Adventure Style):
+Reformularemos a interface do usuário adaptando os componentes visuais para o universo de escalada e aplicando uma identidade visual moderna (Earthy Dark Mode / Adventure Style):
 
 1. **Branding e Paleta de Cores**:
    - Substituiremos as cores padrão do chatbot (azul/cinza padrão de aeroportos) por uma paleta premium inspirada na natureza e rocha natural.
@@ -26,7 +26,7 @@ Reformularemos a interface do usuário adaptando os componentes visuais para o u
 
 3. **Tipografia e Ícones**:
    - Integração da fonte *Outfit* ou *Plus Jakarta Sans* via Google Fonts para títulos e textos, garantindo uma estética moderna e esportiva.
-   - Substituição de ícones de aviação por ícones de aventura e montanhismo (Lucide Icons já disponíveis no Next.js).
+   - Substituição de ícones de aviação por ícones de aventura e escalada (Lucide Icons já disponíveis no Next.js).
 
 ## Alternativas Consideradas
 

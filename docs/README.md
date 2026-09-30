@@ -9,7 +9,7 @@ Bem-vindo à central de documentação técnica do projeto **gemini-chatbot**. A
 ### 🤖 Inteligência Artificial & Comportamento
 *   [**Arquitetura Completa do Sistema**](file:///Users/govinda/projetos/gemini-chatbot/docs/system-architecture.md): Visão geral da arquitetura de ponta a ponta, incluindo as camadas de apresentação (frontend), API (backend), IA (Gemini) e persistência de dados.
 *   [**Estratégia de Algoritmo de IA e Tools**](file:///Users/govinda/projetos/gemini-chatbot/docs/ai-strategy-and-tools.md): Explica como o modelo Gemini é acionado, a orquestração do Vercel AI SDK, o sandboxing de ferramentas permitidas e o ciclo de vida do *tool calling*.
-*   [**Guia de Personalização (Skills)**](file:///Users/govinda/projetos/gemini-chatbot/docs/customization-guide.md): Detalha como a arquitetura do bot é modularizada para suportar diferentes "Skills" (como voos ou montanhismo) sem quebrar código legado.
+*   [**Guia de Personalização (Skills)**](file:///Users/govinda/projetos/gemini-chatbot/docs/customization-guide.md): Detalha como a arquitetura do bot é modularizada para suportar diferentes "Skills" (como voos ou escalada) sem quebrar código legado.
 
 ### ⛰️ Módulo Xperience Climb
 *   [**Guia de Componentes Climb e Integração**](file:///Users/govinda/projetos/gemini-chatbot/docs/climb-components-guide.md): Documenta como a IA utiliza componentes visuais interativos ([`climb-components.tsx`](file:///Users/govinda/projetos/gemini-chatbot/components/climb/climb-components.tsx)) no chat.

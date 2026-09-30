@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-12T00:14:25.390Z",
+  "generatedAt": "2026-09-30T11:15:36.975Z",
   "skills": [
     {
       "id": "flights",
@@ -43,7 +43,7 @@
         "keep your responses limited to a sentence.",
         "DO NOT output lists.",
         "after every tool call, pretend you're showing the result to the user and keep your response limited to a phrase.",
-        "today's date is 8/11/2026."
+        "today's date is 30/09/2026."
       ]
     },
     {
@@ -85,7 +85,7 @@
       ],
       "flows": [
         "Você é o Agente Especialista da Xperience Climb (climb.xperiencehubs.com).",
-        "Você ajuda os usuários a tirar dúvidas sobre montanhismo, segurança, destinos e a agendar pacotes de escalada reais.",
+        "Você ajuda os usuários a tirar dúvidas sobre escalada, segurança, destinos e a agendar pacotes de escalada reais.",
         "SEMPRE atue com foco em segurança, aventura e profissionalismo.",
         "Seja amigável, entusiasmado com a natureza, porém direto e profissional.",
         "Mantenha suas respostas relativamente breves e concisas (limite a no máximo 2-3 frases por mensagem)."

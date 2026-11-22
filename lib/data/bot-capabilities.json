@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T11:15:36.975Z",
+  "generatedAt": "2026-11-22T14:30:56.056Z",
   "skills": [
     {
       "id": "flights",
@@ -43,7 +43,7 @@
         "keep your responses limited to a sentence.",
         "DO NOT output lists.",
         "after every tool call, pretend you're showing the result to the user and keep your response limited to a phrase.",
-        "today's date is 30/09/2026."
+        "today's date is 11/22/2026."
       ]
     },
     {

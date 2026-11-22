@@ -6,6 +6,7 @@ import { auth, signOut } from "@/app/(auth)/auth";
 import { History } from "./history";
 import { SlashIcon } from "./icons";
 import { ThemeToggle } from "./theme-toggle";
+import { XperienceLogo } from "./xperience-logo";
 import { Button } from "../ui/button";
 import {
   DropdownMenu,
@@ -22,20 +23,15 @@ export const Navbar = async () => {
       <div className="bg-background absolute top-0 left-0 w-dvw py-2 px-3 justify-between flex flex-row items-center z-30">
         <div className="flex flex-row gap-3 items-center">
           <History user={session?.user} />
-          <div className="flex flex-row gap-2 items-center">
-            <Image
-              src="/images/gemini-logo.png"
-              height={20}
-              width={20}
-              alt="gemini logo"
-            />
-            <div className="text-zinc-500">
+          <Link href="/" className="flex flex-row gap-2 items-center hover:opacity-85 transition-opacity">
+            <XperienceLogo width={120} height={30} />
+            <div className="text-zinc-500 hidden sm:block">
               <SlashIcon size={16} />
             </div>
-            <div className="text-sm dark:text-zinc-300 truncate w-28 md:w-fit">
-              Next.js Gemini Chatbot
+            <div className="text-xs font-medium text-zinc-500 dark:text-zinc-400 hidden sm:block">
+              AI Assistant
             </div>
-          </div>
+          </Link>
         </div>
 
         {session ? (
@@ -67,7 +63,7 @@ export const Navbar = async () => {
                     type="submit"
                     className="w-full text-left px-1 py-0.5 text-red-500"
                   >
-                    Sign out
+                    Sair
                   </button>
                 </form>
               </DropdownMenuItem>
@@ -75,7 +71,7 @@ export const Navbar = async () => {
           </DropdownMenu>
         ) : (
           <Button className="py-1.5 px-2 h-fit font-normal text-white" asChild>
-            <Link href="/login">Login</Link>
+            <Link href="/login">Entrar</Link>
           </Button>
         )}
       </div>

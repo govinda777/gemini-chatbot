@@ -3,7 +3,7 @@ import { convertToCoreMessages, Message, streamText } from "ai";
 import { geminiFlashModel } from "@/ai";
 import { auth } from "@/app/(auth)/auth";
 import { deleteChatById, getChatById, saveChat } from "@/db/queries";
-import { getSkill } from "@/lib/ai/skills-registry";
+import { getSkill, skillsRegistry } from "@/lib/ai/skills-registry";
 import { checkRateLimit } from "@/lib/rate-limiter";
 
 import { getTools } from "./tools";
@@ -31,10 +31,22 @@ export async function POST(request: Request) {
   }
 
   // ADR-0007: Determine active skill
-  let skillId: string;
-  if (requestSkillId) {
+  let skillId: string = "xperience-climb";
+
+  // Verifica se o usuário informou explicitamente "skill $<nome da skill>" no início da mensagem
+  if (lastMessage && typeof lastMessage.content === "string") {
+    const match = lastMessage.content.match(/^skill\s+\$([a-zA-Z0-9_-]+)/i);
+    if (match && match[1]) {
+      const parsedSkill = match[1].toLowerCase();
+      if (parsedSkill in skillsRegistry) {
+        skillId = parsedSkill;
+      }
+    }
+  }
+
+  if (requestSkillId && (!lastMessage || !lastMessage.content.match(/^skill\s+\$/i))) {
     skillId = requestSkillId;
-  } else {
+  } else if (!lastMessage || !lastMessage.content.match(/^skill\s+\$/i)) {
     const chatFromDb = await getChatById({ id });
     skillId = chatFromDb?.skillId || "xperience-climb"; // Default to Xperience Climb
   }

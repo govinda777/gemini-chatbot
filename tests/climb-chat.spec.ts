@@ -25,18 +25,18 @@ test.describe("🎭 E2E BDD SPECIFICATION - CLIMB CHAT", () => {
     console.log("➜ Quando o usuário registra uma nova conta");
     await page.fill("input#email", uniqueEmail);
     await page.fill("input#password", password);
-    await page.click('button:has-text("Sign Up")');
+    await page.click('button:has-text("Criar Conta")');
 
     // [E realiza o login para estabelecer a sessão]
     // A página de registro agora possui redirecionamento automático nativo ao registrar com sucesso!
     console.log("➜ E realiza o login para estabelecer a sessão (redirecionamento nativo)");
     await expect(page).toHaveURL("/", { timeout: 15000 });
 
-    // [E envia a mensagem "Olá! Quais são os pacotes de iniciante na Xperience Climb?"]
-    console.log("➜ E envia a mensagem 'Olá! Quais são os pacotes de iniciante na Xperience Climb?'");
-    const chatInput = page.locator('textarea[placeholder="Send a message..."]');
+    // [E envia a mensagem "skill $xperience-climb Olá! Quais são os pacotes de iniciante na Xperience Climb?"]
+    console.log("➜ E envia a mensagem com invocação da skill");
+    const chatInput = page.locator('textarea[placeholder="Envie uma mensagem..."]');
     await expect(chatInput).toBeVisible();
-    await chatInput.fill("Olá! Quais são os pacotes de iniciante na Xperience Climb?");
+    await chatInput.fill("skill $xperience-climb Olá! Quais são os pacotes de iniciante na Xperience Climb?");
     await chatInput.press("Enter");
 
     // [Então a IA deve acionar a ferramenta listClimbPackages]

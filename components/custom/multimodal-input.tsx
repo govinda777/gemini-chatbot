@@ -21,14 +21,24 @@ import { Textarea } from "../ui/textarea";
 
 const suggestedActions = [
   {
-    title: "Help me book a flight",
-    label: "from San Francisco to London",
-    action: "Help me book a flight from San Francisco to London",
+    title: "Escalada para Iniciantes",
+    label: "Pacotes de batismo na rocha",
+    action: "skill $xperience-climb Olá! Quais são os pacotes de iniciante na Xperience Climb?",
   },
   {
-    title: "What is the status",
-    label: "of flight BA142 flying tmrw?",
-    action: "What is the status of flight BA142 flying tmrw?",
+    title: "Equipamentos de Segurança",
+    label: "Quais itens estão inclusos?",
+    action: "skill $xperience-climb Quais equipamentos de segurança estão inclusos nos pacotes?",
+  },
+  {
+    title: "Reserva de Voo",
+    label: "De São Paulo para Londres",
+    action: "skill $flights Quero reservar um voo de São Paulo para Londres",
+  },
+  {
+    title: "Status de Voo",
+    label: "Consultar voo BA142 de amanhã",
+    action: "skill $flights Qual o status do voo BA142 marcado para amanhã?",
   },
 ];
 
